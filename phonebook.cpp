@@ -1,28 +1,47 @@
 /*
  * ============================================================================
  *
- *       Filename:  record_example.cpp
+ *       Filename:  phonebook.cpp
  *
- *    Description:  
+ *    Description:  cpp file for phonebook.cpp
  *
- *         Author:  Darren Maczka (dkm), dmaczka@hazyblue.me
+ *         Author:  Christopher Cox, Ryan Diluoffo, Kara Dodenhoff
  *
  * ============================================================================
  */
+/*
+#include <vector>
+#include <algorithm>
+#include <string>
+#include <iostream>
 
-class PhoneRecord {
+using namespace std;
+class PhoneRecord 
+{
 public:
-  PhoneRecord();
-  // getters and setters for all private variables
-  //
-  std::string first_name() const;
+  PhoneRecord(istream &input);
+  //returns first name
+  string first_name() const;
+  //returns last name
+  string last_name() const;
+  //return phone number
+  string phone_num() const;
+  //finds the correct contact and returns the info
+  string search();
+  //prints the contact record
+  void print_record();
+  //loads the contact record from input file or cin
+  void load_record();
 
 private:
-	string fname;
-	string lname;
-	int phone_number;
-}
-
+  //first name variable
+	string Fname;
+	//last name variable
+	string Lname;
+	//phone number variable
+	string Pnumber;
+};
+*/
 #include <vector>
 #include <algorithm>
 
