@@ -9,84 +9,57 @@
  *
  * ============================================================================
  */
-/*
-#include <vector>
-#include <algorithm>
-#include <string>
+#include <cstdlib>
 #include <iostream>
+#include <string>
+#include <boost/regex.hpp>
 
 using namespace std;
-class PhoneRecord 
-{
-public:
-  PhoneRecord(istream &input);
-  //returns first name
-  string first_name() const;
-  //returns last name
-  string last_name() const;
-  //return phone number
-  string phone_num() const;
-  //finds the correct contact and returns the info
-  string search();
-  //prints the contact record
-  void print_record();
-  //loads the contact record from input file or cin
-  void load_record();
 
-private:
-  //first name variable
-	string Fname;
-	//last name variable
-	string Lname;
-	//phone number variable
-	string Pnumber;
-};
-*/
-#include <vector>
-#include <algorithm>
+int PhoneRecord::search(istream& input) {
+ boost::regex Pnumber;
+    try {
+        Pnumber = boost::regex("[2-9][0-9]{2}[-.)]?[2-9][0-9]{2}[-.]?[0-9]{4}");
+    } catch (boost::regex_error e) {
+        cerr << "Regex error: " << e.what() << endl;
+        exit(1);
+    }
+ boost::regex Fname;
+    try {
+        Fname = boost::regex("[A-Z][a-z]?[ ]");
+    } catch (boost::regex_error e) {
+        cerr << "Regex error: " << e.what() << endl;
+        exit(1);
+    }
 
-/*
-struct search_predicate {
-	search_redicate(const std::string& ss) : search_string(ss) {};
+ boost::regex Lname;
+    try {
+        Lname = boost::regex("[ ][A-Z][a-z]?");
+    } catch (boost::regex_error e) {
+        cerr << "Regex error: " << e.what() << endl;
+        exit(1);
+    }
+    string line;
 
-	bool operator()(const PhoneRecord& record) {
- 		return (record.first_name().find(search_string) != std::string::npos)
-	}
-	string search_string;
-}*/
-
-void print_record(const PhoneRecord& record, bool detailed) {
-	//if detailed, print a detailed outut for record
-	//else print a summary of record
+    while(getline(input, line)) {
+        string matches = " does not match ";
+        if (boost::regex_match(line, Pnumber, Fname, Lname)) {
+            matches = " matches ";
+        }
+        cout << Pnumber <<" "<<Fname<<" "<<Lname<< matches << line << endl;
+    }
 }
 
-int main() {
-	std::vector<PhoneRecord> records;
+PhoneRecord::PhoneRecord(istream &input){
+	contact=search(input);
+}
 
-	records = load_records("phone_records.txt")
-
-	std::vector<PhoneRecord> found;
-
-	std::string search_string = "a";
-
-	mypred = search_predicate(search_string);
-
-	//found = std::copy_if(records.begin(), records.end(), std::back_insert_iterator<std::vector<PhoneRecord> >, mypred);
-
-	
-	for ( auto record : records ) {
-		if record.first_name().find(search_string) != std::string::npos) {
-			found.push_back(record)
-		}
-	}
-
-	// found now contains 0 or more records that matched the search string
-	if (found.size() == 1) {
-		print_record(found[0], true);
-	} else {
-		for ( auto record : found ) {
-			print_record(record, false);
-		}
-	}
-	
+string PhoneRecord::get_first_name() const{
+return Fname;
+}
+string PhoneRecord::get_last_name() const{
+return Lname
+}
+string PhoneRecord::get_phone_num() const{
+return Pnumber
 }
