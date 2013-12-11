@@ -11,3 +11,7 @@ input which contact they desire, sort through the list. Then output the intended
 
 We plan on using the unix philosphy of modularity.  This will be a key point in our project because we wo\
 uld like to build something that is reuseable.
+
+At the moment we are using regex to run the search for a contact. In order to use these you have to run this comman in\
+ Ubuntu:sudo apt-get install libboost-regex-dev or fedora:sudo yum install boost-devel
+
