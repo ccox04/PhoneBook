@@ -58,8 +58,8 @@ string PhoneRecord::get_first_name() const{
 return Fname;
 }
 string PhoneRecord::get_last_name() const{
-return Lname
+  return Lname;
 }
 string PhoneRecord::get_phone_num() const{
-return Pnumber
+  return Pnumber;
 }
