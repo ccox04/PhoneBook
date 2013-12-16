@@ -1,8 +1,14 @@
 PhoneBook
+contributors: kdody, diluoffo, cox04
 
-contributors: kdody, ccox04, diluoffo
-url: https://github.com/kdody/AddressBook
+url: 
 
-This is an address book in which the user will input a last name, a first name, and a phone number.
+We are writing a program that will take in records and sort them back for the user.  It will have a user \
+input which contact they desire, sort through the list. Then output the intended contact.
 
-This stores the address book in a file so the user has a collection of their phonebook.
+We plan on using the unix philosphy of modularity.  This will be a key point in our project because we wo\
+uld like to build something that is reuseable.
+
+At the moment we are using regex to run the search for a contact. In order to use these you have to run this comman in\
+ Ubuntu:sudo apt-get install libboost-regex-dev or fedora:sudo yum install boost-devel
+
