@@ -1,4 +1,4 @@
-Address Book
+PhoneBook
 
 contributors: kdody, ccox04, diluoffo
 url: https://github.com/kdody/AddressBook
