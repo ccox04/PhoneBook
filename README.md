@@ -1,7 +1,7 @@
 PhoneBook
 contributors: kdody, diluoffo, cox04
 
-url: https://github.com/kdody/AddressBook 
+url: https://github.com/ccox04/PhoneBook 
 
 We are writing a program that will take in records and sort them back for the user.  It will have a user \
 input which contact they desire, sort through the list. Then output the intended contact.
