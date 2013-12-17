@@ -12,7 +12,8 @@ int usage( FILE* fpo, int state){
 fprintf(fpo,"Usage: Contact [OPTION] [FILE]...\n"
 				"\n"
 				"Options:\n"
-				"\t-q suppress normal output\n"
+				"\t-s searches the phonebook for a specific person\n"
+				"\t-a opens the entire phonebook\n"
 				"\t-h display this help message\n");
 exit(state);
 }
@@ -23,7 +24,7 @@ int main(int argc, char* argv[])
 	quiet=0;
 	int state=0;
 	extern int optind;
-	while((opt=getopt(argc,argv,"qh")) != -1){
+	while((opt=getopt(argc,argv,"sah")) != -1){
  		switch (opt) {
  			case 'q':
      				quiet = 1;
