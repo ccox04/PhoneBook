@@ -35,12 +35,6 @@ PhoneRecord::PhoneRecord(istream &input){
 	contact=search(input);
 }
 
-string PhoneRecord::get_first_name() const{
-return Fname;
-}
-string PhoneRecord::get_last_name() const{
-  return Lname;
-}
-string PhoneRecord::get_phone_num() const{
-  return Pnumber;
+string PhoneRecord::get_contact() const{
+return contact;
 }

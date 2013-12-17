@@ -15,7 +15,16 @@ int main(int argc, char* argv[])
 
   if(argc<=0)
     {
-      PhoneRecord PR.cinAppend(cin);
+      //Include here
+      string contact;
+      cout << "Enter in the First name of the Contact." << endl;  
+      cout << "Then enter the last name followed by the phone number." << endl; 
+      cout << " Enter it exactly in the same format as shown: \n" << endl;
+      cout << "Last Name First name Phone number. \n" << endl;
+      cout << "Doe John 540-231-1500" << endl;
+      cin >> contact
+      
+      PhoneRecord PR.cinAppend(contact);
 
 
     }

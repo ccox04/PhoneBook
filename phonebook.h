@@ -19,20 +19,8 @@ class PhoneRecord
 {
 public:
   PhoneRecord(istream &input);
-  //returns first name
-  string get_first_name() const;
-  //returns last name
-  string get_last_name() const;
-  //return phone number
-  string get_phone_num() const;
-  //returns first name
-  string first_name() const;
-
-  //returns last name
-  string last_name() const;
-
-  //return phone number
-  string phone_num() const;
+  //returns contact information
+  string get_contact() const;
 
   //finds the correct contact and returns the info
   string search();
@@ -47,12 +35,6 @@ public:
   void load_record();
 
 private:
-  	//first name variable
-	string Fname;
-
-	//last name variable
-	string Lname;
-
-	//phone number variable
-	string Pnumber;
+  	//name and phone number for contact variable
+  string contact;
 };
