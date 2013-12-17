@@ -8,36 +8,11 @@
 using std::ifstream;
 using std::cin;
 
-int usage( FILE* fpo, int state){
-fprintf(fpo,"Usage: Contact [OPTION] [FILE]...\n"
-				"\n"
-				"Options:\n"
-				"\t-s searches the phonebook for a specific person\n"
-				"\t-a opens the entire phonebook\n"
-				"\t-h display this help message\n");
-exit(state);
-}
+
 
 int main(int argc, char* argv[])
 {
-	int opt,quiet;
-	quiet=0;
-	int state=0;
-	extern int optind;
-	while((opt=getopt(argc,argv,"sah")) != -1){
- 		switch (opt) {
- 			case 'q':
-     				quiet = 1;
-     				break;
- 			case 'h':
-     				usage(stdout, 0);
-     				break;
- 			default: /* '?' */
-     			usage(stderr,3);
-     			}
- 	}
-	argc -= optind;
-	argv += optind;
+	
 	if(argc<=0)
 	{
 		PhoneRecord PR.cinAppend(cin);
