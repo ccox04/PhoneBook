@@ -20,11 +20,11 @@ class PhoneRecord
 public:
   PhoneRecord(istream &input);
   //returns first name
-  string first_name() const;
+  string get_first_name() const;
   //returns last name
-  string last_name() const;
+  string get_last_name() const;
   //return phone number
-  string phone_num() const;
+  string get_phone_num() const;
   //finds the correct contact and returns the info
   string search();
   //prints the contact record
