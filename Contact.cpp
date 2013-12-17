@@ -40,7 +40,7 @@ int main(int argc, char* argv[])
 	argv += optind;
 	if(argc<=0)
 	{
-		PhoneRecord PR(cin);
+		PhoneRecord PR.cinAppend(cin);
 		
 
 	}
@@ -55,7 +55,7 @@ int main(int argc, char* argv[])
 			}
 		}
 		else{
-		PhoneRecord PR(in);
+		PhoneRecord PR.fileAppend(in);
 		
 			if(state<1){
 				state=1;
