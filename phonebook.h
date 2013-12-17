@@ -33,8 +33,10 @@ public:
 
   //loads the contact from search if it is in correct format
   void load_record();
-
+  //Opens the phonebook.txt and prints each line
+  void viewContacts();
 private:
   	//name and phone number for contact variable
   string contact;
+  
 };

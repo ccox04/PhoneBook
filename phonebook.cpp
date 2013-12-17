@@ -38,3 +38,13 @@ PhoneRecord::PhoneRecord(istream &input){
 string PhoneRecord::get_contact() const{
 return contact;
 }
+
+void PhoneRecord::viewContacts(){
+  fstream Phonebook("phonebook.txt", fstream::in);
+  string currentLine;
+  while (!Phonebook.eof())
+  {
+    getline(Phonebook, currentLine);
+    cout << currentLine << endl;
+  }
+}
