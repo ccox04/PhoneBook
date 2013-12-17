@@ -10,46 +10,27 @@
  * ============================================================================
  */
 #include <cstdlib>
+#include <fstream>
 #include <iostream>
 #include <string>
 #include <boost/regex.hpp>
 
 using namespace std;
 
-int PhoneRecord::search(istream& input) {
- boost::regex Pnumber;
-    try {
-        Pnumber = boost::regex("[2-9][0-9]{2}[-.)]?[2-9][0-9]{2}[-.]?[0-9]{4}");
-    } catch (boost::regex_error e) {
-        cerr << "Regex error: " << e.what() << endl;
-        exit(1);
-    }
- boost::regex Fname;
-    try {
-        Fname = boost::regex("[A-Z][a-z]?[ ]");
-    } catch (boost::regex_error e) {
-        cerr << "Regex error: " << e.what() << endl;
-        exit(1);
-    }
+int PhoneRecord::fileAppend(istream& input) {
+std:ifstream inputfile(input);
+std:ofstream outfile;
+outfile.open("phonebook.txt", std::ios_base::app);
+outfile<<inputfile;
 
- boost::regex Lname;
-    try {
-        Lname = boost::regex("[ ][A-Z][a-z]?");
-    } catch (boost::regex_error e) {
-        cerr << "Regex error: " << e.what() << endl;
-        exit(1);
-    }
-    string line;
-
-    while(getline(input, line)) {
-        string matches = " does not match ";
-        if (boost::regex_match(line, Pnumber, Fname, Lname)) {
-            matches = " matches ";
-        }
-        cout << Pnumber <<" "<<Fname<<" "<<Lname<< matches << line << endl;
-    }
 }
 
+int PhoneRecord::cinAppend(istream& input) {
+std:ofstream outfile;
+outfile.open("phonebook.txt", std::ios_base::app);
+outfile<<cin;
+
+}
 PhoneRecord::PhoneRecord(istream &input){
 	contact=search(input);
 }
