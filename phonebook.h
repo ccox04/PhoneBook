@@ -23,7 +23,7 @@ class PhoneRecord
   //PhoneRecord(istream &input);
   PhoneRecord();
   //appends the current text file
-  int fileAppend(istream &input);
+  void fileAppend(istream &input);
   //appends to the current file via cin
   //(istream &input)
   int cinAppend(string contact);

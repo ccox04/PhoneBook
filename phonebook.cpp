@@ -24,11 +24,11 @@ PhoneRecord::PhoneRecord()
   contact = "Doe John 540-231-1500";
 }
 
-int PhoneRecord::fileAppend(istream &input) {
-std:ifstream inputfile(input);
+void PhoneRecord::fileAppend(istream &input) {
+
 std:ofstream outfile;
 outfile.open("phonebook.txt", std::ios_base::app);
-outfile<<inputfile;
+outfile<<input;
 
 }
 //(istream &input)
