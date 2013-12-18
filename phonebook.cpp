@@ -54,15 +54,16 @@ void PhoneRecord::viewContacts(){
 string PhoneRecord::search(string contacts)
 {
   int index;
+  string line;
   ifstream searchfile;
   searchfile.open("phonebook.txt");
   while(!searchfile.eof())
     {
-      getline(searchfile,contacts);
-      if((index = contacts.find(seachfile,0)) != string::npos)
+      getline(searchfile,line);
+      if((index = line.find(contacts,0)) != string::npos)
 	{
 	  cout << "The contact(s) you searched for are: \n" << endl;
-	  cout << searchfile << endl;
+	  cout << contacts << endl;
 	}
     }
   return searchfile;
