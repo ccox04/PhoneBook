@@ -1,5 +1,5 @@
 PhoneBook
-contributors: kdody, diluoffo, cox04
+contributors: kdody, diluoffo, ccox04
 
 url: https://github.com/ccox04/PhoneBook 
 
