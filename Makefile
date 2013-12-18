@@ -1,10 +1,10 @@
-all: phonebook
+all: Contact
 
-phonebook: Contact.o phonebook.o
-	g++ Contact.o phonebook.o -o phonebook
-Contact.o: Contact.cpp
+Contact: Contact.o phonebook.o
+	g++ Contact.o phonebook.o -o Contact
+Contact.o: phonebook.h Contact.cpp
 	g++ -c Contact.cpp
-phonebook.0: phonebook.cpp
+phonebook.o: phonebook.h phonebook.cpp
 	g++ -c phonebook.cpp
 clean:
-	rm -rf *o phonebook
+	rm -rf *o Contact
