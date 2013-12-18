@@ -12,7 +12,7 @@ using std::cin;
 
 int main(int argc, char* argv[])
 {
-  PhoneRecord PR;
+  PhoneRecord PR(istream &input);
   if(argc<=0)
     {
 	cout << "To add a Contact type 'add'" << endl;
@@ -21,7 +21,8 @@ int main(int argc, char* argv[])
         cout << "To find a specific Contact type 'search'" << endl;
         cout << "To view a list of all the commands type 'help'" << endl;
         cout << "To exit the program type 'exit'" << endl;
-	string action, contact;
+	string action;
+	string contact;
 	while(1)
   	{
    	 cin >> action;
@@ -46,12 +47,12 @@ int main(int argc, char* argv[])
 		//PhoneRecord PR.search(contact);
 		PR.search(contact);
 	}
-	else if(action == "remove"){
-		cout << "Please enter the Last name followed by the First name:" <<endl;
-		cin >> contact;
+	//else if(action == "remove"){
+		//cout << "Please enter the Last name followed by the First name:" <<endl;
+		//cin >> contact;
 		//PhoneRecord PR.remove(contact);
-		PR.remove(contact);
-	}
+		//PR.remove(contact);
+	//}
 	else if(action == "help"){
 		cout << "To add a Contact type 'add'" << endl;
         	cout << "To remove a Contact type 'remove'" << endl;
@@ -60,31 +61,10 @@ int main(int argc, char* argv[])
         	cout << "To view a list of all the commands type 'help'" << endl;
         	cout << "To exit the program type 'exit'" << endl;
 	}
-	else (action == "exit"){
+	else if (action == "exit"){
 		return 0;
 	}
-
-	
-
     }
-  for(int i=0;i<argc;i++)
-    {
-      ifstream in( argv[i]);
-      if (!in.is_open())
-	{
-	  warn("%s: error message", argv[i]);//error opening *argv
-	  if(state<2){
-	    state=2;
-	  }
-	}
-      else{
-	//PhoneRecord PR.fileAppend(in);
-	PR.fileAppend(in);
-
-	if(state<1){
-	  state=1;
-	}
-      }
-    }
-  return state;
+  }
 }
+  
