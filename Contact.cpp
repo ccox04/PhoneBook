@@ -26,7 +26,6 @@ int main(int argc, char* argv[])
   	{
    	 cin >> action;
     	if (action == "add") {
-      	//Include here
       		
       		cout << "Enter in the First name of the Contact." << endl;  
       		cout << "Then enter the last name followed by the phone number." << endl; 
