@@ -25,18 +25,17 @@ PhoneRecord::PhoneRecord()
 }
 
 void PhoneRecord::fileAppend(istream &input) {
-
 std:ofstream outfile;
 outfile.open("phonebook.txt", std::ios_base::app);
 outfile<<input;
 
 }
-//(istream &input)
-int PhoneRecord::cinAppend(string contact) {
+
+void PhoneRecord::cinAppend(string contact) {
 std:ofstream outfile;
 outfile.open("phonebook.txt", std::ios_base::app);
 outfile << contact;
-//outfile<<input;
+
 
 }
 //PhoneRecord::PhoneRecord(istream &input){

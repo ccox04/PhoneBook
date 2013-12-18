@@ -26,7 +26,7 @@ class PhoneRecord
   void fileAppend(istream &input);
   //appends to the current file via cin
   //(istream &input)
-  int cinAppend(string contact);
+  void cinAppend(string contact);
   //returns contact information
   string get_contact() const;
 

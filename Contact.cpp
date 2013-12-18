@@ -14,8 +14,7 @@ using namespace std;
 int main(int argc, char* argv[])
 {
   PhoneRecord PR;
-  if(argc<=0)
-    {
+  
 	cout << "To add a Contact type 'add'" << endl;
         cout << "To remove a Contact type 'remove'" << endl;
         cout << "To view the entire Phone Book type 'view'" << endl;
@@ -29,13 +28,11 @@ int main(int argc, char* argv[])
    	 cin >> action;
     	if (action == "add") {
       		
-      		cout << "Enter in the First name of the Contact." << endl;  
-      		cout << "Then enter the last name followed by the phone number." << endl; 
-      		cout << " Enter it exactly in the same format as shown: \n" << endl;
-      		cout << "Last Name First name Phone number. \n" << endl;
-      		cout << "Doe John 540-231-1500" << endl;
+      		
+      		cout << "Enter the Last Name First name Phone number of the contact" << endl;
+      		cout << "i.e. Doe John 540-231-1500:" << endl;
       		cin >> contact;
-		PR.get_contact();
+		//PR.get_contact();
       		//PhoneRecord PR.cinAppend(contact);
 		PR.cinAppend(contact);
 	}
@@ -67,5 +64,5 @@ int main(int argc, char* argv[])
 		return 0;
 	}
 	}
-    }
+    
 }
