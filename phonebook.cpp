@@ -9,8 +9,8 @@
  *
  * ============================================================================
  */
-
-
+#include "phonebook.h"
+#include <int>
 #include <cstdlib>
 #include <fstream>
 #include <iostream>
@@ -52,7 +52,7 @@ void PhoneRecord::viewContacts(){
   }
 }
 
-string PhoneRecord::search(contacts)
+string PhoneRecord::search(string contacts)
 {
   int index;
   string In_line;

@@ -8,22 +8,28 @@
  *         Author:  Christopher Cox, Ryan Diluoffo, Kara Dodenhoff
  *
  * ============================================================================
- */
-#include <vector>
-#include <algorithm>
+ *
+*/
+#include <fstream>
 #include <string>
 #include <iostream>
+#include <int>
 
 using namespace std;
 class PhoneRecord 
 {
 public:
+  //contructor
   PhoneRecord(istream &input);
+  //appends the current text file
+  int fileAppend(istream& input);
+  //appends to the current file via cin
+  int cinAppend(istream& input);
   //returns contact information
   string get_contact() const;
 
   //finds the correct contact and returns the info
-  string search();
+  string search(string);
 
   //checks for correct formatting
   string Fsearch();
