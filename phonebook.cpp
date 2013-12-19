@@ -21,7 +21,7 @@ using namespace std;
 
 PhoneRecord::PhoneRecord()
 {
-  contact = "Doe John 540-231-1500";
+  contact = "Doe_John_540-231-1500";
 }
 
 void PhoneRecord::fileAppend(istream &input) {
@@ -34,7 +34,7 @@ outfile<<input;
 void PhoneRecord::cinAppend(string contact) {
 std:ofstream outfile;
 outfile.open("phonebook.txt", std::ios_base::app);
-outfile << contact;
+ outfile << contact << endl;
 
 
 }
