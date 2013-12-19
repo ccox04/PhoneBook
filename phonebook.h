@@ -18,7 +18,7 @@
 using namespace std;
 class PhoneRecord 
 {
-public:
+ public:
   //contructor
   //PhoneRecord(istream &input);
   PhoneRecord();
@@ -33,17 +33,9 @@ public:
   //finds the correct contact information
   void search(string contact);
 
-  //checks for correct formatting
-  string Fsearch();
-
-  //prints the contact based on user input.(-s,-a)
-  void print_record();
-
-  //loads the contact from search if it is in correct format
-  void load_record();
   //Opens the phonebook.txt and prints each line
   void viewContacts();
-private:
+ private:
   	//name and phone number for contact variable
   string contact;
   

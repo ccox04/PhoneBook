@@ -19,6 +19,11 @@
 
 using namespace std;
 
+PhoneRecord::PhoneRecord()
+{
+  contact = "Doe John 540-231-1500";
+}
+
 int PhoneRecord::fileAppend(istream &input) {
 std:ifstream inputfile(input);
 std:ofstream outfile;
@@ -36,8 +41,8 @@ outfile << contact;
 }
 //PhoneRecord::PhoneRecord(istream &input){
   // contact=search(input);
-PhoneRecord::PhoneRecord(){
-}
+//PhoneRecord::PhoneRecord(){
+//}
 
 string PhoneRecord::get_contact() const{
 return contact;

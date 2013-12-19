@@ -1,24 +1,10 @@
-CXX := g++
-CXX_FLAGS := -Wall -Wextra -g -std=c++11
-CXX_LIBS := -l boost_regex
+all: phonebook
 
-CC := gcc
-CC_FLAGS := -Wall -Wextra -g -pedantic -D_XOPEN_SOURCE=700
-
-all: boost_regex c_regex
-
-boost_regex: Contact.o
-	$(CXX) $(CXX_FLAGS) $(CXX_LIBS) -o $@ $^ 
-
-c_regex: regex_test_c.o
-	$(CC) $(CC_FLAGS) -o $@ $^
-
-%_c.o : %_c.c
-	$(CC) $(CC_FLAGS) -c -o $@ $<
-
-%_boost.o : %_boost.cpp
-	$(CXX) $(CXX_FLAGS) -c -o $@ $<
-
-.PHONY: clean
+phonebook: Contact.o phonebook.o
+	g++ Contact.o phonebook.o -o phonebook
+Contact.o: Contact.cpp
+	g++ -c Contact.cpp
+phonebook.0: phonebook.cpp
+	g++ -c phonebook.cpp
 clean:
-	- rm -f *.o boost_regex c_regex
+	rm -rf *o phonebook
