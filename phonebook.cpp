@@ -51,7 +51,7 @@ void PhoneRecord::viewContacts(){
   }
 }
 
-string PhoneRecord::search(string contacts)
+void PhoneRecord::search(string contacts)
 {
   int index;
   string line;
@@ -66,5 +66,4 @@ string PhoneRecord::search(string contacts)
 	  cout << contacts << endl;
 	}
     }
-  return searchfile;
 }
