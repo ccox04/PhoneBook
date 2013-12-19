@@ -20,23 +20,18 @@ class PhoneRecord
 {
  public:
   //contructor
-  //PhoneRecord(istream &input);
   PhoneRecord();
   //appends the current text file
   void fileAppend(istream &input);
   //appends to the current file via cin
-  //(istream &input)
   void cinAppend(string contact);
   //returns contact information
   string get_contact() const;
-
   //finds the correct contact information
   void search(string contact);
-
   //Opens the phonebook.txt and prints each line
   void viewContacts();
  private:
-  	//name and phone number for contact variable
+  //name and phone number for contact variable
   string contact;
-  
 };

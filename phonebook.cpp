@@ -19,35 +19,32 @@
 
 using namespace std;
 
+//This is the contructor
 PhoneRecord::PhoneRecord()
 {
   contact = "Doe_John_540-231-1500";
 }
 
+//This appends a file
 void PhoneRecord::fileAppend(istream &input) {
-std:ofstream outfile;
-outfile.open("phonebook.txt", std::ios_base::app);
-outfile<<input;
-
+ ofstream outfile;
+  outfile.open("phonebook.txt", ios_base::app);
+  outfile<<input;
 }
 
+//This appends what the user typed in
 void PhoneRecord::cinAppend(string contact) {
-std:ofstream outfile;
-outfile.open("phonebook.txt", std::ios_base::app);
- outfile << contact << endl;
-
-
+ ofstream outfile;
+     outfile.open("phonebook.txt", ios_base::app);
+     outfile << contact << "\n";
 }
-//PhoneRecord::PhoneRecord(istream &input){
-  // contact=search(input);
-//PhoneRecord::PhoneRecord(){
-//}
 
+//This returns the contact
 string PhoneRecord::get_contact() const{
 return contact;
 }
 
-
+//This is to view a list of all contacts
 void PhoneRecord::viewContacts(){
   fstream Phonebook("phonebook.txt", fstream::in);
   string currentLine;
@@ -58,6 +55,7 @@ void PhoneRecord::viewContacts(){
   }
 }
 
+//This is to search through the list for a particular contact
 void PhoneRecord::search(string contacts)
 {
   int index;
