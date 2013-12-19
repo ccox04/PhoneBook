@@ -30,7 +30,7 @@ int main(int argc, char* argv[])
       		
       		
       		cout << "Enter the Last Name First name Phone number of the contact" << endl;
-      		cout << "i.e. Doe John 540-231-1500:" << endl;
+      		cout << "i.e. Doe_John_540-231-1500:" << endl;
       		cin >> contact;
 		//PR.get_contact();
       		//PhoneRecord PR.cinAppend(contact);
