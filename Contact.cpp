@@ -37,17 +37,17 @@ int main(int argc, char* argv[])
       		cin >> contact;
 		PR.get_contact();
       		//PhoneRecord PR.cinAppend(contact);
-		//PR.cinAppend(contact);
+		PR.cinAppend(contact);
 	}
 	else if(action == "view"){
 	  //PhoneRecord PR.viewContacts();	
-	  // PR.viewContacts();
+	   PR.viewContacts();
 	}
 	else if(action == "search"){
 		cout << "Please enter the First name of the Contact:"<< endl;
 		cin>>contact;
 		//PhoneRecord PR.search(contact);
-		//PR.search(contact);
+		PR.search(contact);
 	}
 	//else if(action == "remove"){
 		//cout << "Please enter the Last name followed by the First name:" <<endl;
