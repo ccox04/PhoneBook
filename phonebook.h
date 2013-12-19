@@ -13,17 +13,20 @@
 #include <fstream>
 #include <string>
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 class PhoneRecord 
 {
 public:
   //contructor
-  PhoneRecord(istream &input);
+  //PhoneRecord(istream &input);
+  PhoneRecord();
   //appends the current text file
   int fileAppend(istream &input);
   //appends to the current file via cin
-  int cinAppend(istream &input);
+  //(istream &input)
+  int cinAppend(string contact);
   //returns contact information
   string get_contact() const;
 

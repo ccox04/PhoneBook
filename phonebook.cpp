@@ -15,6 +15,7 @@
 #include <iostream>
 #include <string>
 #include <boost/regex.hpp>
+#include <iomanip>
 
 using namespace std;
 
@@ -25,15 +26,17 @@ outfile.open("phonebook.txt", std::ios_base::app);
 outfile<<inputfile;
 
 }
-
-int PhoneRecord::cinAppend(istream &input) {
+//(istream &input)
+int PhoneRecord::cinAppend(string contact) {
 std:ofstream outfile;
 outfile.open("phonebook.txt", std::ios_base::app);
-outfile<<cin;
+outfile << contact;
+//outfile<<input;
 
 }
-PhoneRecord::PhoneRecord(istream &input){
-  contact=search(input);
+//PhoneRecord::PhoneRecord(istream &input){
+  // contact=search(input);
+PhoneRecord::PhoneRecord(){
 }
 
 string PhoneRecord::get_contact() const{
