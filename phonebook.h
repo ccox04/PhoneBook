@@ -21,14 +21,14 @@ public:
   //contructor
   PhoneRecord(istream &input);
   //appends the current text file
-  int fileAppend(istream& input);
+  int fileAppend(istream &input);
   //appends to the current file via cin
-  int cinAppend(istream& input);
+  int cinAppend(istream &input);
   //returns contact information
   string get_contact() const;
 
-  //finds the correct contact and returns the info
-  string search(string);
+  //finds the correct contact information
+  void search(string contact);
 
   //checks for correct formatting
   string Fsearch();

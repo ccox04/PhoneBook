@@ -12,7 +12,7 @@ using std::cin;
 
 int main(int argc, char* argv[])
 {
-  PhoneRecord PR(istream &input);
+  //PhoneRecord PR;
   if(argc<=0)
     {
 	cout << "To add a Contact type 'add'" << endl;
@@ -34,18 +34,18 @@ int main(int argc, char* argv[])
       		cout << "Last Name First name Phone number. \n" << endl;
       		cout << "Doe John 540-231-1500" << endl;
       		cin >> contact;
-      		//PhoneRecord PR.cinAppend(contact);
-		PR.cinAppend(contact);
+      		PhoneRecord PR.cinAppend(contact);
+		//PR.cinAppend(contact);
 	}
 	else if(action == "view"){
-	  //PhoneRecord PR.viewContacts();	
-	  PR.viewContacts();
+	  PhoneRecord PR.viewContacts();	
+	  //PR.viewContacts();
 	}
 	else if(action == "search"){
 		cout << "Please enter the First name of the Contact:"<< endl;
 		cin>>contact;
-		//PhoneRecord PR.search(contact);
-		PR.search(contact);
+		PhoneRecord PR.search(contact);
+		//PR.search(contact);
 	}
 	//else if(action == "remove"){
 		//cout << "Please enter the Last name followed by the First name:" <<endl;
@@ -64,7 +64,6 @@ int main(int argc, char* argv[])
 	else if (action == "exit"){
 		return 0;
 	}
+	}
     }
-  }
 }
-  
